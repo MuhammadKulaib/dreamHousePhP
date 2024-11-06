@@ -1,5 +1,5 @@
 <?php include "header.php"; ?>
-
+    <form action="add_booking.php" method="post" >
     <div class="flex justify-center flex-column flex-gap items-center">
         <div class="rounded-card mt-4">
             <h1 class="text-center text-green text">حجز الموعد</h1>
@@ -17,5 +17,6 @@
         </div>
 
     </div>
+    </form>
     
 <?php include 'footer.php'; ?>

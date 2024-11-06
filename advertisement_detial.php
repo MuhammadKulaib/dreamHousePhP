@@ -30,7 +30,6 @@ $img_stmt = $conn->prepare($images_query);
 $img_stmt->bind_param("i", $house_id);
 $img_stmt->execute();
 $images_result = $img_stmt->get_result();
-
 ?>
 
 
@@ -88,7 +87,7 @@ $images_result = $img_stmt->get_result();
                 <div class="flex items-center justify-evenly mt-4 w-100">
                     <span class="btn-green" style="color: #fff !important;"><?php echo htmlspecialchars($house['advertiser_name']); ?></span>
                     <span class="input btn-green"><?php echo htmlspecialchars($house['advertiser_phone']); ?></span>
-                    <button onclick="document.location='booking_form.php?house_id=<?php echo $house['id']; ?>'" class="btn-green"> حجز موعد اللقاء</button>
+                    <button onclick="document.location='add_booking.php?house_id=<?php echo $house['id']; ?>'" class="btn-green"> حجز موعد اللقاء</button>
                 </div>
             </div>
         </div>

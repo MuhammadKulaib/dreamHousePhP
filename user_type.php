@@ -34,7 +34,7 @@
             <div>
                 <button onclick="document.location='index.php'">الرئيسية</button>
                 <button onclick="document.location='advertisements.php'">الإعلانات</button><br>
-                <button onclick="document.location='booking.php'">الحجوزات</button><br>
+                <button onclick="document.location='add_booking.php'">الحجوزات</button><br>
                 <button onclick="document.location='add_advertisement.php'"> نشر إعلان</button><br>
                 <button onclick="document.location='contact.php'">تواصل معنا</button><br>
             </div>

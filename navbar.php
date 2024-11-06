@@ -39,11 +39,11 @@
         <aside id="as">
             <i class="aside-toggle">|||</i>
             <div>
+                
+                <!-- روابط للكل -->
                 <button onclick="document.location='index.php'">الرئيسية</button>
                 <button onclick="document.location='contact.php'">تواصل معنا</button><br>
-                <button onclick="document.location='advertisements.php'">الإعلانات</button><br>
-                <button onclick="document.location='booking.php'">الحجوزات</button>
-                
+                <button onclick="document.location='advertisements.php'">الإعلانات</button><br>        
                 <!-- روابط المؤجر -->
                 <?php if (isset($_SESSION['user_data']['user_type']) && $_SESSION['user_data']['user_type']=="rented_user" ):  ?>
                     <button onclick="document.location='my_advertisements.php'">إدارة العقارات</button>
@@ -58,7 +58,7 @@
                 
                 
                 <?php  endif ;?>
-                <?php if (isset($_SESSION['user_dats'])): ?>
+                <?php if (isset($_SESSION['user_data'])): ?>
                 <button onclick="document.location='logout.php'">خروج</button>
                 <?php endif; ?>
             </div>

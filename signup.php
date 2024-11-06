@@ -9,6 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $lname = trim($_POST['lname']);
     $phone = trim($_POST['phone']);
     $email = trim($_POST['email']);
+    $userType = trim($_POST['user_type']);
     $password = trim($_POST['password']);
     $confirmPassword = trim($_POST['confirm_password']);
     
@@ -48,7 +49,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Insert the new user into the database
         $stmt = $conn->prepare("INSERT INTO users (fname, lname, phone, email, password, user_type) VALUES (?, ?, ?, ?, ?, ?)");
-        $userType = 'rented_user'; // Set a default user type
         $stmt->bind_param("ssssss", $fname, $lname, $phone, $email, $hashedPassword, $userType);
 
         if ($stmt->execute()) {

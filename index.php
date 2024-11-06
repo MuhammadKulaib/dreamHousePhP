@@ -36,7 +36,7 @@
                                             <span>هتصهتيبصي</span>
                                         </div>
                                         </p>
-                                        <a href="#" class="btn btn-success col-12">عرض</a>
+                                        <a href="" class="btn btn-success col-12">عرض</a>
                                     </div>
                                 </div>
                             </swiper-slide>
