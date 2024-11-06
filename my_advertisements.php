@@ -1,13 +1,13 @@
 <?php
  include "header.php";
- $user_id = 6;
+ $user_id = $_SESSION['user_data']['id'];
  $stmt = $conn->prepare("select * from houses where user_id=?");
  $stmt->bind_param('i', $user_id);
  $stmt->execute();
  $houses = $stmt->get_result();
  
  ?>
-            <a href="add_update_new_advertise.php" class="btn btn-primary col-2">إضافة</a>
+      <a href="add_update_new_advertise.php" class="btn btn-primary col-2">إضافة</a>
         <h2 class="text-center">إدارة العقارات </h2>
      
         <!-- Display Houses Table -->
@@ -35,8 +35,9 @@
                         <td><?php echo $house['location']; ?></td>
                         <td><?php echo $house['status'] ? 'Active' : 'Inactive'; ?></td>
                         <td>
-                            <a href="add_update_new_advertise.php?edit=<?php echo $house['id']; ?>" class="btn btn-info btn-sm">تعدبل</a>
-                            <a href="crud_advertisement.php?delete=<?php echo $house['id']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure?')">حذف</a>
+                            <a href="add_update_new_advertise.php?edit=<?php echo $house['id']; ?>" class=""><i class="fa fa-edit text-success"></i></a>
+                            <a href="advertisement_detial.php?id=<?php echo $house['id']; ?>" class=""> <i class="fa fa-eye"></i></a>
+                            <a href="crud_advertisement.php?delete=<?php echo $house['id']; ?>" class="" onclick="return confirm('Are you sure?')"> <i class="fa fa-trash text-danger"></i></a>
                         </td>
                     </tr>
                 <?php endwhile; ?>

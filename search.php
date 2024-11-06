@@ -17,12 +17,12 @@
             </div>
             <ul>
                 <li class="navbar-item">
-                    <a class="navbar-link flex items-center" href="login.html">
+                    <a class="navbar-link flex items-center" href="login.php">
                         <img class="" src="https://www12.0zz0.com/2024/10/02/02/860951848.png" width="50" height="70"> تسجيل الدخول
                     </a>
                 </li>
                 <li class="navbar-item">
-                    <a class="navbar-link flex items-center" href="signup.html">
+                    <a class="navbar-link flex items-center" href="signup.php">
                         <img class="" src="https://www12.0zz0.com/2024/10/02/02/860951848.png" width="50" height="70"> إنشاء حساب
                     </a>
                 </li>
@@ -33,11 +33,14 @@
         <aside id="as">
             <i class="aside-toggle">|||</i>
             <div>
-                <button onclick="document.location='index.html'">الرئيسية</button>
-                <button onclick="document.location='advertisements.html'">الإعلانات</button><br>
-                <button onclick="document.location='booking.html'">الحجوزات</button><br>
-                <button onclick="document.location='add_advertisement.html'"> نشر إعلان</button><br>
-                <button onclick="document.location='contact.html'">تواصل معنا</button><br>
+                <button onclick="document.location='index.php'">الرئيسية</button>
+                <button onclick="document.location='advertisements.php'">الإعلانات</button><br>
+                <button onclick="document.location='booking.php'">الحجوزات</button><br>
+                <button onclick="document.location='add_advertisement.php'"> نشر إعلان</button><br>
+                <button onclick="document.location='contact.php'">تواصل معنا</button><br>
+                <button onclick="document.location='contact.php'"> تسجيل الخروج</button><br>
+
+
             </div>
         </aside>
     </div>

@@ -35,6 +35,9 @@
                 <button onclick="document.location='my_advertisements.php'">إدارة العقارات</button>
                 <button onclick="document.location='add_advertisement.php'"> نشر إعلان</button><br>
                 <button onclick="document.location='contact.php'">تواصل معنا</button><br>
+                <button onclick="document.location='logout.php'"> تسجيل الخروج</button><br>
+
+
             </div>
         </aside>
     </div>

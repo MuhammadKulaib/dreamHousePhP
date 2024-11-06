@@ -12,6 +12,6 @@
                     <img src="assets/images/contact/x-twitter.png" width="92" height="94">
                     <a class="decoration-none main-color text-large" href="https://x.com/dreamh5490/">Dream_house</a>
                 </div>
-            </div>
+            
 </div>
 <?php  include "footer.php" ?>

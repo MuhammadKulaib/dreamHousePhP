@@ -1,7 +1,6 @@
 <?php
 session_start();
 include "database/db_connection.php";
-
 $edit_state = false;
 $id = '';
 
