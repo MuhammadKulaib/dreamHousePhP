@@ -11,16 +11,26 @@
           </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                 <?php if (isset($_SESSION['user_data'])): ?>
                     <li class="nav-item">
-                        <a class="nav-link flex items-center" href="login.php">
-                            <img class="" src="https://www12.0zz0.com/2024/10/02/02/860951848.png" width="50" height="70"> تسجيل الدخول
-                        </a>
-                    </li>
+                            <a class="nav-link flex items-center" href="#">
+                                <img class="" src="https://www12.0zz0.com/2024/10/02/02/860951848.png" width="50" height="70">  مرحبا <?php echo $_SESSION['user_data']['fname'] ?> 
+                            </a>
+
+                    </li>                    
+                
+                <?php else: ?>
                     <li class="nav-item">
-                        <a class="nav-link flex items-center" href="signup.php">
-                            <img class="" src="https://www12.0zz0.com/2024/10/02/02/860951848.png" width="50" height="70"> إنشاء حساب
-                        </a>
-                    </li>
+                            <a class="nav-link flex items-center" href="login.php">
+                                <img class="" src="https://www12.0zz0.com/2024/10/02/02/860951848.png" width="50" height="70"> تسجيل الدخول
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link flex items-center" href="signup.php">
+                                <img class="" src="https://www12.0zz0.com/2024/10/02/02/860951848.png" width="50" height="70"> إنشاء حساب
+                            </a>
+                        </li>
+                <?php endif; ?>
                 </ul>
             </div>
         </div>
@@ -30,14 +40,27 @@
             <i class="aside-toggle">|||</i>
             <div>
                 <button onclick="document.location='index.php'">الرئيسية</button>
+                <button onclick="document.location='contact.php'">تواصل معنا</button><br>
                 <button onclick="document.location='advertisements.php'">الإعلانات</button><br>
                 <button onclick="document.location='booking.php'">الحجوزات</button>
-                <button onclick="document.location='my_advertisements.php'">إدارة العقارات</button>
-                <button onclick="document.location='add_advertisement.php'"> نشر إعلان</button><br>
-                <button onclick="document.location='contact.php'">تواصل معنا</button><br>
-                <button onclick="document.location='logout.php'"> تسجيل الخروج</button><br>
-
-
+                
+                <!-- روابط المؤجر -->
+                <?php if (isset($_SESSION['user_data']['user_type']) && $_SESSION['user_data']['user_type']=="rented_user" ):  ?>
+                    <button onclick="document.location='my_advertisements.php'">إدارة العقارات</button>
+                    <button onclick="document.location='rented_user_booking.php'"> الحجوزات للإجار</button>
+                    <button onclick="document.location='add_update_new_advertise.php'"> نشر إعلان</button>
+                    
+                
+                <?php  endif ;?>
+                <!-- روابط المستاجر -->
+                <?php if (isset($_SESSION['user_data']['user_type']) && $_SESSION['user_data']['user_type']=="tenant_user" ):  ?>
+                    <button onclick="document.location='rented_user_booking.php'"> عرض طلبات الحجوزات </button>
+                
+                
+                <?php  endif ;?>
+                <?php if (isset($_SESSION['user_dats'])): ?>
+                <button onclick="document.location='logout.php'">خروج</button>
+                <?php endif; ?>
             </div>
         </aside>
     </div>
